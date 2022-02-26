@@ -107,6 +107,37 @@
           }
         }
       }
+    },
+    "moveit-components": {
+      "projectType": "library",
+      "root": "projects/moveit-components",
+      "sourceRoot": "projects/moveit-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/moveit-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/moveit-components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/moveit-components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/moveit-components/src/test.ts",
+            "tsConfig": "projects/moveit-components/tsconfig.spec.json",
+            "karmaConfig": "projects/moveit-components/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "moveit-app"
