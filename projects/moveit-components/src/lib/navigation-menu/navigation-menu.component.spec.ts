@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MoveitComponentsComponent } from './moveit-components.component';
+import { NavigationMenuComponent } from './navigation-menu.component';
 
-describe('MoveitComponentsComponent', () => {
-  let component: MoveitComponentsComponent;
-  let fixture: ComponentFixture<MoveitComponentsComponent>;
+describe('NavigationMenuComponent', () => {
+  let component: NavigationMenuComponent;
+  let fixture: ComponentFixture<NavigationMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MoveitComponentsComponent ]
+      declarations: [ NavigationMenuComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MoveitComponentsComponent);
+    fixture = TestBed.createComponent(NavigationMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

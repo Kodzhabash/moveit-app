@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
-import { MoveitComponentsComponent } from './moveit-components.component';
-
-
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 @NgModule({
   declarations: [
-    MoveitComponentsComponent
+    NavigationMenuComponent
   ],
-  imports: [
-  ],
+  imports: [],
   exports: [
-    MoveitComponentsComponent
-  ]
+    NavigationMenuComponent
+  ],
 })
-export class MoveitComponentsModule { }
+export class MoveitComponentsModule {}
