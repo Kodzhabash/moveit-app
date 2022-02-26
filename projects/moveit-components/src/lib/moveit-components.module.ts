@@ -1,13 +1,8 @@
 import { NgModule } from '@angular/core';
-import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 @NgModule({
-  declarations: [
-    NavigationMenuComponent
-  ],
+  declarations: [],
   imports: [],
-  exports: [
-    NavigationMenuComponent
-  ],
+  exports: [],
 })
 export class MoveitComponentsModule {}
