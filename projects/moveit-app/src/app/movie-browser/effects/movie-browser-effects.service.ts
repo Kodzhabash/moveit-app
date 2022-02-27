@@ -5,6 +5,7 @@ import { map, mergeMap, catchError } from 'rxjs/operators';
 
 import { MovieBrowserLoadSuccess, MOVIE_BROWSER_INITIATE, MOVIE_BROWSER_SEARCH } from '../actions/movie-browser.actions';
 import { MovieBrowserService } from '../services/movie-browser.service';
+import { tMDBResponse } from '../../models/tmdb-response';
 
 @Injectable()
 export class MovieBrowserEffectsService {
@@ -13,7 +14,8 @@ export class MovieBrowserEffectsService {
     ofType(MOVIE_BROWSER_INITIATE),
     mergeMap(() => this.movieBrowserService.getTrendingMovies()
       .pipe(
-        map(movies => new MovieBrowserLoadSuccess(movies)),
+        map(response => response as tMDBResponse),
+        map(response => new MovieBrowserLoadSuccess(response)),
         catchError(() => EMPTY)
       ))
     )
@@ -23,7 +25,8 @@ export class MovieBrowserEffectsService {
     ofType(MOVIE_BROWSER_SEARCH),
     mergeMap(() => this.movieBrowserService.searchMovies()
       .pipe(
-        map(movies => new MovieBrowserLoadSuccess(movies)),
+        map(response => response as tMDBResponse),
+        map(response => new MovieBrowserLoadSuccess(response)),
         catchError(() => EMPTY)
       ))
     )

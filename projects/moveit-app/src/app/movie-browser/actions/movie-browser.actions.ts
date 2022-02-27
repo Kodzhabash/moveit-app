@@ -1,4 +1,5 @@
 import { Action } from '@ngrx/store';
+import { tMDBResponse } from '../../models/tmdb-response';
 
 export const MOVIE_BROWSER_INITIATE = '[MOVIE_BROWSER] INITIATE';
 export const MOVIE_BROWSER_SEARCH = '[MOVIE_BROWSER] SEARCH';
@@ -17,7 +18,7 @@ export class MovieBrowserSearch implements Action {
 export class MovieBrowserLoadSuccess implements Action {
   readonly type = MOVIE_BROWSER_LOAD_SUCCESS;
 
-  constructor(public payload: any) {}
+  constructor(public payload: tMDBResponse) { }
 }
 
 export type Actions =
