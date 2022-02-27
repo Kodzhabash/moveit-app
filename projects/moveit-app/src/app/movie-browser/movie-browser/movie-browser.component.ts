@@ -31,4 +31,8 @@ export class MovieBrowserComponent implements OnInit {
 
     this.store.dispatch(movieBrowserInitiate());
   }
+
+  get isPending(): boolean {
+    return this.requestStatus === RequestStatus.PENDING;
+  }
 }

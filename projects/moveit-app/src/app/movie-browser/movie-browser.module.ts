@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { MovieBrowserComponent } from './movie-browser/movie-browser.component';
 import { SharedModule } from '../shared/shared.module';
@@ -12,6 +13,7 @@ import * as movieBrowserStore from './reducers/movie-browser';
   declarations: [MovieBrowserComponent],
   imports: [
     CommonModule,
+    MatProgressSpinnerModule,
     SharedModule,
     EffectsModule.forFeature([MovieBrowserEffectsService]),
     StoreModule.forFeature(
