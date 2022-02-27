@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MovieBrowserComponent } from './movie-browser/movie-browser.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -9,7 +10,8 @@ import { MovieBrowserComponent } from './movie-browser/movie-browser.component';
     MovieBrowserComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class MovieBrowserModule { }
