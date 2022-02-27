@@ -9,6 +9,10 @@ import { MoveitComponentsModule } from 'moveit-components';
 
 import { MovieBrowserModule } from './movie-browser/movie-browser.module';
 import { MovieLibraryModule } from './movie-library/movie-library.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { MovieBrowserService } from './movie-browser/services/movie-browser.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,16 @@ import { MovieLibraryModule } from './movie-library/movie-library.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MoveitComponentsModule,
     MovieBrowserModule,
-    MovieLibraryModule
+    MovieLibraryModule,
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot([])
   ],
-  providers: [],
+  providers: [
+    MovieBrowserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

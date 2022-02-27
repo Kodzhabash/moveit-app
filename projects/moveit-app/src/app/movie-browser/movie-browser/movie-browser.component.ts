@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { MovieBrowserInitiate } from '../actions/movie-browser.actions';
+import { MovieBrowserState } from '../store/movie-browser.store';
+
 
 @Component({
   selector: 'app-movie-browser',
@@ -7,9 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieBrowserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<MovieBrowserState>) {}
 
   ngOnInit(): void {
+    this.store.dispatch(new MovieBrowserInitiate());
   }
 
 }
