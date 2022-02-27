@@ -1,27 +1,18 @@
-import { Action } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 import { tMDBResponse } from '../../models/tmdb-response';
 
 export const MOVIE_BROWSER_INITIATE = '[MOVIE_BROWSER] INITIATE';
 export const MOVIE_BROWSER_SEARCH = '[MOVIE_BROWSER] SEARCH';
 export const MOVIE_BROWSER_LOAD_SUCCESS = '[MOVIE_BROWSER] LOAD_SUCCESS';
 
-export class MovieBrowserInitiate implements Action {
-  readonly type = MOVIE_BROWSER_INITIATE;
-}
+export const movieBrowserInitiate = createAction(MOVIE_BROWSER_INITIATE);
 
-export class MovieBrowserSearch implements Action {
-  readonly type = MOVIE_BROWSER_SEARCH;
+export const movieBrowserSearch = createAction(
+  MOVIE_BROWSER_SEARCH,
+  props<{ query: string }>()
+);
 
-  constructor(public payload: string) {}
-}
-
-export class MovieBrowserLoadSuccess implements Action {
-  readonly type = MOVIE_BROWSER_LOAD_SUCCESS;
-
-  constructor(public payload: tMDBResponse) { }
-}
-
-export type Actions =
-  MovieBrowserInitiate
-  | MovieBrowserSearch
-  | MovieBrowserLoadSuccess;
+export const movieBrowserLoadSuccess = createAction(
+  MOVIE_BROWSER_LOAD_SUCCESS,
+  props<tMDBResponse>()
+);
