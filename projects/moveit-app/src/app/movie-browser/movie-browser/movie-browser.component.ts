@@ -10,7 +10,7 @@ import {
 } from '../reducers/movie-browser';
 
 @Component({
-  selector: 'app-movie-browser',
+  selector: 'mia-movie-browser',
   templateUrl: './movie-browser.component.html',
   styleUrls: ['./movie-browser.component.scss'],
 })

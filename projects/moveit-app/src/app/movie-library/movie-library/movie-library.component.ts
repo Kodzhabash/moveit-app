@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-movie-library',
+  selector: 'mia-movie-library',
   templateUrl: './movie-library.component.html',
   styleUrls: ['./movie-library.component.scss']
 })

@@ -16,7 +16,7 @@
       },
       "root": "projects/moveit-app",
       "sourceRoot": "projects/moveit-app/src",
-      "prefix": "app",
+      "prefix": "mia",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
