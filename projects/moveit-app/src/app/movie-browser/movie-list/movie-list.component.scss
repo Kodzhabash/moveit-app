@@ -1,0 +1,10 @@
+.mia-movie-list-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.mia-movie-card {
+  margin: 1rem;
+  max-width: 16rem;
+}
